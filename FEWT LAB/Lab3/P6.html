@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab-3-P6</title>
+</head>
+<body>
+    <script>
+        n=parseInt(prompt("Enter the number:"))
+        count=0;
+        temp=n;
+        temp1=temp;
+        a=0;
+        sum=0
+        while(temp!=0){
+            temp=parseInt(temp/10)
+            count++
+        }
+        while(temp1!=0){
+            a=parseInt(temp1%10)
+            temp1=parseInt(temp1/10)
+            sum=sum+parseInt(Math.pow(a,count))
+        }
+        if(sum==n){
+            alert("Armstrong")
+        }else{
+            alert("Not Armstrong")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab-4-P6</title>
+</head>
+<body>
+    <script>
+        n=prompt("Enter the number:")
+        if(isNaN(n)){
+            document.write("Not a number.")
+        }else{
+            n=parseInt(n)
+        }
+        if(n<0 && n>999){
+            document.write("Out of range")
+        }else{
+            ones=["","one","two","three","four","five","six","eight","nine"]
+            teens=["ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"]
+            tens=["","","twenty","thirty","fourty","fifty","sixty","seventy","eighty","ninety"]
+        }
+        let word=""
+        if(n>=100){
+            word+=ones[Math.floor(n/100)]+ "hundred"
+            n=n%100
+        }else{
+            if(n>=10 && n<=19){
+                word+=teens[Math.floor(n-10)]+" "
+            }else{
+                word+=tens[Math.floor(n/10)]+" "
+                word+=ones[Math.floor(n%10)]
+            }
+        }
+        alert(word)
+    </script>
+</body>
+</html>

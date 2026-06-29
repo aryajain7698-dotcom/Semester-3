@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab-5-P5</title>
+</head>
+<body>
+    <script>
+        n=prompt("Enter the sentence:")
+        let a=n.split(" ")
+        ch=prompt("Enter the word for searching:")
+        for(let i=0;i<n.length;i++){
+            if(ch==a[i]){
+                document.write(i)
+                break;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab-3-P5</title>
+</head>
+<body>
+    <script>
+        n=parseInt(prompt("Enter the number:"))
+        sum=0;
+        a=0;
+        temp=n;
+        while(n!=0){
+            a=parseInt(n%10)
+            n=parseInt(n/10)
+            sum=sum*10+a
+        }
+        if(sum==temp){
+            alert("The number is palindrome")
+        }else{
+            alert("The number is not palindrome")   
+        }
+    </script>
+</body>
+</html>

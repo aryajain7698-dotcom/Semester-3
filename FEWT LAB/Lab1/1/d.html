@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab1-d</title>
+    <style>
+        .a{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            animation-name: convert;
+            animation-duration: 8s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+            position: relative;
+        }
+        @keyframes convert{
+            0%{
+                left: 0px;
+                top: 0px;
+            }
+            25%{
+                left: 300px;
+                top: 0px;
+            }
+            50%{
+                left: 300px;
+                top: 300px;
+            }
+            75%{
+                left: 0px;
+                top: 300px;
+            }
+            100%{
+                left: 0px;
+                top: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="a"></div>
+</body>
+</html>

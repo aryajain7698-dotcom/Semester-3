@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab-5-P1</title>
+</head>
+<body>
+    <script>
+        n=parseInt(prompt("Enter the size of array:"))
+        let a=[]
+        for(let i=0;i<n;i++){
+            b=parseInt(prompt("Enter the number: "))
+            a.push(b)
+        }
+        lar=a[0]
+        for(let i=1;i<a.length;i++){
+            if(lar<a[i]){
+                lar=a[i]
+            }
+        }
+        document.write("The largest number is: "+lar)
+    </script>
+</body>
+</html>

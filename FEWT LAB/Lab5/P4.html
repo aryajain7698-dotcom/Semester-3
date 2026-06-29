@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab-5-P4</title>
+</head>
+<body>
+    <script>
+        
+        function quickSort(a){
+
+            if(a.length<=1){
+                return a
+            }
+
+             let pivot=a[a.length-1]
+
+            let left=[]
+            let right=[]
+
+            for(let i=0;i<a.length-1;i++){
+
+            if(a[i]>pivot){
+                right.push(a[i])
+            }else{
+                left.push(a[i])
+            }
+        }
+        let sortLeft = quickSort(left)
+        let sortRight = quickSort(right)
+        let mergedArray = []
+
+        for(let i=0;i<sortLeft.length;i++){
+            mergedArray.push(sortLeft[i])
+        }
+        mergedArray.push(pivot)
+
+        for(let i=0;i<sortRight.length;i++){
+            mergedArray.push(sortRight[i])
+        }
+        return mergedArray        
+        }
+
+        n=parseInt(prompt("Enter the size of array:"))
+        let a=[]
+        for(let i=0;i<n;i++){
+            b=parseInt(prompt("Enter the number: "))
+            a.push(b)
+        }
+        result = quickSort(a)
+        document.write(result) 
+    </script>
+</body>
+</html>

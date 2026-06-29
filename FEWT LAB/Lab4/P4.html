@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab-4-P4</title>
+</head>
+<body>
+    <script>
+        a=parseInt(prompt("Enter the first number:"))
+        b=parseInt(prompt("Enter the second number:"))
+        c=0
+        n=0
+        if(a<b){
+            n=a;
+        }else{
+            n=b;
+        }
+        for(let i=1;i<=n;i++){
+            if(a%i==0 && b%i==0){
+                c=i;
+            }
+        }
+        document.write("GCD: "+c)
+    </script>
+</body>
+</html>

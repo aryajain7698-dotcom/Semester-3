@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab-6-P1</title>
+</head>
+<body>
+    <script>
+        facultyList = [
+            { 
+                Facultyname: "Prof. Arjun Bala", 
+                img: "https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/15---28-04-2023-02-07-35.jpg",
+                sub : "FEWT"
+            },
+            {
+                Facultyname: "Prof. pradyuman Sinh Jadeja",
+                img : "https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/6---28-04-2023-02-06-07.jpg",
+                sub: "DS"
+            },
+            {
+                Facultyname: "Prof. Dhvanik Zala",
+                img : "https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/298---18-03-2024-04-24-20.jpg",
+                sub: "Mathematics"
+            },
+            {
+                Facultyname: "Prof. Depp Padaliya",
+                img: "https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/454---14-08-2025-09-34-58.jpg",
+                sub: "T-SQL"
+            }
+        ]
+        for(i=0;i<facultyList.length;i++){
+            document.write(facultyList[i].Facultyname+"</br>")
+            document.write("<img src='"+facultyList[i].img+"'></br>")
+            document.write(facultyList[i].sub+"</br>")
+            
+        }
+    </script>
+</body>
+</html>

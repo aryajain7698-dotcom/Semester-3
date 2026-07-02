@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab-6-P1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <script>
+        facultyList = [
+            { 
+                Facultyname: "Prof. Arjun Bala", 
+                img: "https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/15---28-04-2023-02-07-35.jpg",
+                sub : "FEWT"
+            },
+            {
+                Facultyname: "Prof. pradyuman Sinh Jadeja",
+                img : "https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/6---28-04-2023-02-06-07.jpg",
+                sub: "DS"
+            },
+            {
+                Facultyname: "Prof. Dhvanik Zala",
+                img : "https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/298---18-03-2024-04-24-20.jpg",
+                sub: "Mathematics"
+            },
+            {
+                Facultyname: "Prof. Depp Padaliya",
+                img: "https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/454---14-08-2025-09-34-58.jpg",
+                sub: "T-SQL"
+            }
+        ]
+        for(i=0;i<facultyList.length;i++){
+          document.write(
+          `<div class="card" style="width: 18rem;">
+          <img src="${facultyList[i].img}" class="card-img-top" alt="...">
+          <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+          </div>`
+        )
+        }
+    </script>
+</body>
+</html>

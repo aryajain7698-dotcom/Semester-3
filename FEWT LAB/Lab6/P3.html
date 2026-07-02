@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab-6-P3</title>
+</head>
+<body>
+    <script>
+        StudentList = [
+            { 
+                Studentname: "Arya Jain", 
+                img: "https://d1i0dmgfd9cntx.cloudfront.net/Logo/DU_Logo.svg",
+                sem : "3"
+            },
+            {
+                Studentname: "Vraj Faldu",
+                img : "https://d1i0dmgfd9cntx.cloudfront.net/Logo/DU_Logo.svg",
+                sem: "3"
+            },
+            {
+                Studentname: "Henish Palsana",
+                img : "https://d1i0dmgfd9cntx.cloudfront.net/Logo/DU_Logo.svg",
+                sem: "3"
+            },
+            {
+                Studentname: "Mann Khant",
+                img: "https://d1i0dmgfd9cntx.cloudfront.net/Logo/DU_Logo.svg    ",
+                sem: "5"
+            }
+        ]
+        for(i=0;i<StudentList.length;i++){
+                document.write(StudentList[i].Studentname+"</br>")
+                document.write("<img src='"+StudentList[i].img+"'></br>")
+                document.write(StudentList[i].sem+"</br>")
+            }
+        </script>
+    </body>
+    </html>

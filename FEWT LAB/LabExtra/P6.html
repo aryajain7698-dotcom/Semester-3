@@ -1,0 +1,16 @@
+<!-- Write a program which asks distance to a building and angle to top of the building and calculate the height of the building -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab-Extra-P6</title>
+</head>
+<body>
+    <script>
+        let n=parseInt(prompt("Enter angle in degrees:"))
+        let d=parseInt(prompt("Enter a distance in meters:"))
+        document.write("Height of the building="+(d*Math.tan(n * (Math.PI / 180)))+"</br>")
+    </script>
+</body>
+</html>

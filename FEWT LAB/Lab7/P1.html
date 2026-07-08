@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab7-P1</title>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="display" readonly>
+        <div class="button">
+            <button onclick="clearScreen()">C</button>
+            <button onclick="dispValue('/')">/</button>
+            <button onclick="dispValue('*')">*</button>
+            <button onclick="dispValue('-')">-</button>
+            <br>
+            <button onclick="dispValue('7')">7</button>
+            <button onclick="dispValue('8')">8</button>
+            <button onclick="dispValue('9')">9</button>
+            <button onclick="dispValue('+')">+</button>
+            <br>
+            <button onclick="dispValue('4')">4</button>
+            <button onclick="dispValue('5')">5</button>
+            <button onclick="dispValue('6')">6</button>
+            <button onclick="calculate()">=</button>
+            <br>
+            <button onclick="dispValue('1')">1</button>
+            <button onclick="dispValue('2')">2</button>
+            <button onclick="dispValue('3')">3</button>
+            <button onclick="dispValue('0')">0</button>
+        </div>
+    </div>
+    <script>
+        function dispValue(value){
+            var display = document.getElementById("display");
+            display.value+=value;
+        }
+        function clearScreen(value){
+            var display = document.getElementById("display").value=" "
+        }
+        function calculate(){
+            try{
+                document.getElementById("display").value=eval(document.getElementById("display").value)
+            }catch(error){
+                alert(error);
+                
+            }
+        }
+    </script>
+</body>
+</html>

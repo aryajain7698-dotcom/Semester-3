@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab7-P2</title>
+  </head>
+  <body>
+    <form action="">
+      <div class="loginPage">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username"/><br>
+        <input type="number" id="eno" placeholder="enrollment number"/><br>
+        <input type="email" id="email" placeholder="Email"/><br>
+        <input type="date" id="dob" placeholder="date of birth"/><br>
+        <input type="password" id="password" placeholder="password"/><br>
+        <input type="submit" id="confrimPass" /><br>
+      </div>
+    </form>
+    <script>
+      var username = document.getElementById(username).value;
+      var eno = document.getElementById(eno).value;
+      var email = document.getElementById(email).value;
+      var dob = document.getElementById(dob).value;
+      var password = document.getElementById(password).value;
+      var submit = document.getElementById(confirmPass);
+      let errorDisplay = document.getElementById("errorDisplay");
+      errorDisplay.innerHTML = "";
+      let errors = [];
+      function validateForm(event) {
+        if (username.length < 8) {
+          errors.push("username contains 8 letters.");
+        }
+        if (eno.lenght < 11 || eno.length > 11) {
+          errors.push("Password contains 11 numbers");
+        }
+        let emailPattern = /^[a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z](2,27)$/;
+
+        if (emailPattern.test(email)) {
+          (error,
+            push(
+              "The format of email is wrong and email contains less than 27 letters",
+            ));
+        }
+        let today = new Date();
+        let age = today.getFullYear() - dob.getFullYear();
+
+        if (age < 18) {
+          errors.push("The ag should be above 18.");
+        }
+
+        if (password.lenght < 8 || password.lenght > 12) {
+          errors.push("The password contains 8 to 12 letters");
+        }
+        let hadDigit = /\d/.test(password);
+        let passwordPattern = /^[a-zA-Z0-9]/.test(password);
+        if (!hadDigit) {
+          errors.push("Password must contain at least one digit.");
+        }
+        if (!passwordPattern) {
+          errors.push("Password must contain at least one special characters.");
+        }
+        if (errors.length > 0) {
+          for (let i = 0; i < errors.length; i++) {
+            errorDisplay.innerHTML += "<li>" + errors[i] + "</li>";
+          }
+        }
+
+        return false;
+      }
+      alert("Validation successful! Form submitted.");
+      return true;
+    </script>
+  </body>
+</html>

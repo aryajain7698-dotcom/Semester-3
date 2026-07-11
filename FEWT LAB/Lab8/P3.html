@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab8-P3</title>
+</head>
+<body>
+    <input type="text" onke id="showEvent"/>
+    <h1 id="text"></h1>
+    <script>
+        function showEvent(){
+            document.getElementById("showEvent").addEventListener('keydown',()=>{document.getElementById("text").innerHTML="Key down"});
+            document.getElementById("showEvent").addEventListener('keyup',()=>{document.getElementById("text").innerHTML="Key up"});
+            document.getElementById("showEvent").addEventListener('keypress',()=>{document.getElementById("text").innerHTML="Key press"});
+        }
+    </script>
+</body>
+</html>

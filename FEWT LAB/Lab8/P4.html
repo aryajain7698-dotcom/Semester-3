@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab8-P4</title>
+</head>
+<body>
+    <form id="myForm" onfocus="event.preventDefault();">
+        <label>Name:</label>
+        <input type="text" id="nameInput" onfocus="formEvent()">
+        <br><br>
+        <label>City:</label>
+        <select id="citySelect">
+            <option name="ny">New York</option>
+            <option name="lon">London</option>
+            <option name="del">Delhi</option>
+        </select><br><br>
+        <input type="submit" id="submitBtn">
+        <input type="reset" id="resetBtn">
+    </form><br>
+    <span id="text"></span>
+    <script>
+        function formEvent(){
+            document.getElementById("nameInput").addEventListnener('focus',()=>{document.getElementById("text").innerHTML="Focus Input Name"});
+            document.getElementById("nameInput").addEventListnener('blur',()=>{document.getElementById("text").innerHTML="Blur Input Name"});
+            document.getElementById("citySelect").addEventListnener('change',()=>{document.getElementById("text").innerHTML="City Selected"});
+            document.getElementById("submitBtn").addEventListnener('focus',()=>{document.getElementById("text").innerHTML="Focus Submit Button"});
+            document.getElementById("resetBtn").addEventListnener('focus',()=>{document.getElementById("text").innerHTML="Focus Reset Button"});
+        }
+    </script>
+</body>
+</html>

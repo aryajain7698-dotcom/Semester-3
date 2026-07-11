@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab8-P2</title>
+</head>
+<body>
+    <button onclick="singleclick()" ondblclick="doubleclick()" onmouseout="mouseout()" onmouseup="mouseup()" id="change">Click</button>
+    <h1 class="text"></h1>
+    <script>
+        function singleclick(){
+            document.getElementById("change").addEventListener('click',()=>{document.getElementById("text").innerHTML="Button clicked!"});
+        }
+        function doubleclick(){
+            document.getElementById("change").addEventListener('dbclick',()=>{document.getElementById("text").innerHTML="Button double clicked!"});
+        }
+        function mouseout(){
+            document.getElementById("change").addEventListener('mouseon',()=>{document.getElementById("text").innerHTML="Mouse out"})
+        }
+        function mouseup(){
+            document.getElementById("change").addEventListener('mouseup',()=>{document.getElementById("text").innerHTML="Mouse up"})
+        }
+    </script>
+</body>
+</html>

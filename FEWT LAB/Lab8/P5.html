@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab8-P5</title>
+</head>
+<body>
+    <h1 id="heading" onmouseover="yellowColor()" onmouseout="blackColor()">Welcome</h1>
+<br><br>
+
+<button onclick="redColor()">Red</button>
+<button onclick="greenColor()">Green</button>
+
+<p id="time"></p>
+
+<script>
+
+function yellowColor(){
+    document.getElementById("heading").style.color = "yellow";
+}
+
+function blackColor(){
+    document.getElementById("heading").style.color = "black";
+}
+
+function redColor(){
+    document.body.style.backgroundColor = "red";
+}
+
+function greenColor(){
+    document.body.style.backgroundColor = "green";
+}
+
+</script>
+</body>
+</html>

@@ -28,18 +28,24 @@ void insertAtEnd(int x)
 }
 
 void swaping(){
-    struct node *i;
-    int temp;
-    int k=1;
-    for(i=first;i->link!=NULL;i=i->link){
-        if(k%2==0){
-            k++;
-            continue;
+    if (first == NULL || first->link == NULL) {
+        return;
+    }
+    struct node* pred=NULL;
+    struct node* save=first;
+    struct node* next=save->link;
+
+    while(save!=NULL && save->link!=NULL){
+        next=save->link;
+        if(pred==NULL){
+            first=next;
+        }else{
+            pred->link=next;
         }
-        temp=i->info;
-        i->info=i->link->info;
-        i->link->info=temp;
-        k++;
+        save->link=next->link;
+        next->link=save;
+        pred=save;
+        save=save->link;
     }
 }
 

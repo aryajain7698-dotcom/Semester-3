@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab11-P4</title>
+</head>
+<body>
+    <script>
+        let arrs=["red ","orange ", "yellow ", "green ", "blue "]
+        let [first, ,third, ,fifth]=arrs
+        for (arr of arrs) {
+            console.log(arr);
+        }
+        document.writeln(third);
+
+        class Student{
+            constructor(name,roll,age){
+                this.name=name;
+                this.roll=roll;
+                this.age=age;
+            }
+        }
+
+        let obj={
+            name:"Arya",
+            roll:12,
+            age:18
+        };
+
+        const{name,roll,age}=obj;
+
+        console.log(name);
+        console.log(roll);
+        console.log(age);
+    </script>
+</body>
+</html>
